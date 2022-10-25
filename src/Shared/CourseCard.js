@@ -3,8 +3,8 @@ import { FaBed, FaUser } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 
-const RoomCard = ({ room }) => {
-    const { id, title, picture, price, bed, guest } = room;
+const CourseCard = ({ course }) => {
+    const { id, title, picture, price, bed, guest } = course;
     return (
         <div>
             <div className="card w-96 bg-base-100 shadow-xl">
@@ -18,7 +18,7 @@ const RoomCard = ({ room }) => {
                         <div className='flex items-center rounded-md outline outline-white hover:bg-blue-100 p-2 hover:text-black'><FaBed></FaBed> <p className='ml-2'> {bed} </p></div>
                         <div className='flex items-center rounded-md outline outline-white hover:bg-blue-100 p-2 hover:text-black'><FaUser></FaUser><p className='ml-2'> {guest}</p></div>
 
-                        <Link to={`/room/${id}`}><button className="btn outline-0 bg-blue-800">Check Now</button></Link>
+                        <Link to={`/courses/${id}`}><button className="btn outline-0 bg-blue-800">Check Now</button></Link>
                     </div>
                 </div>
             </div>
@@ -26,5 +26,5 @@ const RoomCard = ({ room }) => {
     );
 };
 
-export default RoomCard;
+export default CourseCard;
 

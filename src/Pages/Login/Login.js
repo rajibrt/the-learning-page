@@ -1,14 +1,15 @@
-import { GoogleAuthProvider } from 'firebase/auth';
+import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 import { Button, Checkbox, Label, TextInput } from 'flowbite-react';
 import React, { useContext, useState } from 'react';
 import toast from 'react-hot-toast';
-import { FaGoogle } from 'react-icons/fa';
+import { FaGithub, FaGoogle } from 'react-icons/fa';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthProvider/AuthProvider';
 
 const Login = () => {
     const { signIn, setLoading, providerLogin } = useContext(AuthContext);
-    const googleProvider = new GoogleAuthProvider();
+    const googleProviderLogin = new GoogleAuthProvider();
+    const githubProviderLogin = new GithubAuthProvider();
     const navigate = useNavigate();
     const [error, setError] = useState('');
     const location = useLocation();
@@ -16,12 +17,23 @@ const Login = () => {
     const from = location.state?.from?.pathname || '/';
 
     const handleGoogleSignIn = () => {
-        return providerLogin(googleProvider)
+        return providerLogin(googleProviderLogin)
             .then((result) => {
                 const user = result.user;
                 console.log(user);
-                navigate('/');
+                navigate(from, { replace: true });
+
             })
+            .catch(error => console.error(error))
+    }
+    const handleGithubSignIn = () => {
+        return providerLogin(githubProviderLogin)
+            .then((result) => {
+                const user = result.user;
+                console.log(user);
+                navigate(from, { replace: true });
+            }
+            )
             .catch(error => console.error(error))
     }
 
@@ -96,9 +108,10 @@ const Login = () => {
             </Button>
             <h2 className='text-center font-bold'>or</h2>
             <div className='flex gap-2'>
-                <Button className='bg-yellow-400 w-1/2'><Link to='/register'>Register</Link></Button>
-                <Button className='bg-blue-600 w-1/2' onClick={handleGoogleSignIn}><FaGoogle className='mr-2'></FaGoogle>Login</Button>
+                <Button className='bg-blue-600 w-1/2' onClick={handleGoogleSignIn}><FaGoogle className='mr-2'></FaGoogle>Login with Google</Button>
+                <Button className='bg-blue-600 w-1/2' onClick={handleGithubSignIn}><FaGithub className='mr-2'></FaGithub>Login with Github</Button>
             </div>
+            <Button className='bg-yellow-400 w-2/2'><Link to='/register'>Register</Link></Button>
 
             <p className='text-orange-500'>{error}</p>
             {/* {error.message ?

@@ -22,7 +22,7 @@ const CardSlide = ({ room }) => {
                     </div>
 
                 </div>
-                <Link to={`/room/${id}`}><button className="w-full font-bold text-xl text-white outline-0 py-1 px-2 bg-yellow-700">Check Now</button></Link>
+                <Link to={`/courses/${id}`}><button className="w-full font-bold text-xl text-white outline-0 py-1 px-2 bg-yellow-700">Check Now</button></Link>
             </div>
         </div>
     );

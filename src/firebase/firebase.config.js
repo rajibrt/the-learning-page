@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyCuoi93P67w9fL0UnHJMGW3rHOiGXarwsk",
-    authDomain: "king-palace.firebaseapp.com",
-    projectId: "king-palace",
-    storageBucket: "king-palace.appspot.com",
-    messagingSenderId: "645662142037",
-    appId: "1:645662142037:web:f2793eb7b4219993a66edc"
+    apiKey: "AIzaSyD06IlhGKwvSocPQKCyNI40eCMQahfyfN8",
+    authDomain: "the-learning-page.firebaseapp.com",
+    projectId: "the-learning-page",
+    storageBucket: "the-learning-page.appspot.com",
+    messagingSenderId: "683350271950",
+    appId: "1:683350271950:web:fa8acf70c360e999976d9f"
 };
 
 // Initialize Firebase

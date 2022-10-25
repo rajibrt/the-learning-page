@@ -21,7 +21,7 @@ export const routes = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                loader: () => fetch('http://localhost:4000/hotels')
+                loader: () => fetch('http://localhost:4000/courses')
 
             },
             {
@@ -37,9 +37,9 @@ export const routes = createBrowserRouter([
                 element: <Contact></Contact>
             },
             {
-                path: '/room/:id',
+                path: '/courses/:id',
                 element: <PrivateRoute><RoomBooking></RoomBooking></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:4000/hotels/${params.id}`)
+                loader: ({ params }) => fetch(`http://localhost:4000/courses/${params.id}`)
             },
             {
                 path: '/login',
