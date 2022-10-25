@@ -29,6 +29,7 @@ const Header = () => {
 
     return (
         <div className="navbar bg-white/70 shadow-lg sticky top-0 z-40">
+
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -104,6 +105,12 @@ const Header = () => {
                             <button className="btn btn-ghost"><FaUserCircle className='mr-2'></FaUserCircle> <Link to='/login'>Login</Link></button>
                         </>
                 }
+                <div className="form-control">
+                    <label className="label cursor-pointer">
+                        <span className="label-text">Remember me</span>
+                        <input type="checkbox" className="toggle" checked />
+                    </label>
+                </div>
             </div>
         </div>
 

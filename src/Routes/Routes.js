@@ -4,7 +4,7 @@ import Contact from "../Pages/Contact";
 import Home from "../Pages/Home";
 import Services from "../Pages/Services";
 import Main from "../layout/Main";
-import RoomBooking from "../Pages/RoomBooking";
+import CourseEnroll from "../Pages/CourseEnroll";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Login/Register";
 import OffCanvas from "../Shared/OffCanvas";
@@ -12,11 +12,13 @@ import PrivateRoute from "./PrivateRoute";
 import TermsAndConditions from "../Pages/Others/TermsAndCondition/TermsAndConditions";
 import Profile from "../Pages/Others/Profile/Profile";
 import Faq from "../Pages/Faq";
+import ErrorPage from "../Pages/Others/ErrorPage";
 
 export const routes = createBrowserRouter([
     {
         path: '/',
         element: <Main></Main>,
+        errorElement: <ErrorPage></ErrorPage>,
         children: [
             {
                 path: '/',
@@ -38,7 +40,7 @@ export const routes = createBrowserRouter([
             },
             {
                 path: '/courses/:id',
-                element: <PrivateRoute><RoomBooking></RoomBooking></PrivateRoute>,
+                element: <PrivateRoute><CourseEnroll></CourseEnroll></PrivateRoute>,
                 loader: ({ params }) => fetch(`http://localhost:4000/courses/${params.id}`)
             },
             {
