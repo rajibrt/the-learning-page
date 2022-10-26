@@ -41,15 +41,18 @@ const styles = StyleSheet.create({
 
 const PDFFile = () => {
     // const pdfData = useLoaderData()
-    // const { title, details_course_description, picture, } = pdfData;
+    // const { title, details_course_description, picture, price } = pdfData;
     return (
         <Document>
             <Page style={styles.body}>
                 <Text style={styles.header} fixed></Text>
-                {/* <Image style={styles.image} src={picture} />
-                <Text style={styles.text}>
+                {/* <Image style={styles.image} src={picture} /> */}
+                {/* <Text style={styles.text}>
                     <div className="flex flex-col-reverse">
+                        <div className='flex-1 flex-64 mb-4'><p>{title}</p></div>
                         <div className='flex-1 flex-64 mb-4'><p>{details_course_description}</p></div>
+                        <img className="w-2/5" src={picture} alt="" />
+                        <h2>$ {price}</h2>
                     </div>
 
                 </Text> */}

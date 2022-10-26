@@ -111,8 +111,7 @@ const Login = () => {
                 <Button className='bg-blue-600 w-1/2' onClick={handleGithubSignIn}><FaGithub className='mr-2'></FaGithub>Login with Github</Button>
             </div>
             <h2 className='text-center font-bold'>or</h2>
-            <Button className='bg-yellow-400 w-2/2'><Link to='/register'>Register</Link></Button>
-
+            <Link to='/register'><Button className='bg-yellow-400 w-full'>Register</Button></Link>
             <p className='text-orange-500'>{error}</p>
         </form >
     );

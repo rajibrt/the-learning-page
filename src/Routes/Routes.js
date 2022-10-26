@@ -16,7 +16,7 @@ import ErrorPage from "../Pages/Others/ErrorPage";
 import PDFFile from "../Shared/PDFfile";
 import Enrollment from "../Pages/Enrollment";
 import Courses from "../Pages/Courses";
-
+import LeftSidebar from "../Shared/LeftSidebar";
 export const routes = createBrowserRouter([
     {
         path: '/',
@@ -31,7 +31,8 @@ export const routes = createBrowserRouter([
             },
             {
                 path: '/courses',
-                element: <Courses></Courses>
+                element: <Courses></Courses>,
+                loader: () => fetch('http://localhost:4000/courses')
             },
             {
                 path: '/services',
