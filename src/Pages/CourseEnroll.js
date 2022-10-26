@@ -7,8 +7,8 @@ import PDFFile from '../Shared/PDFfile';
 
 
 const CourseEnroll = () => {
-    const roomBooking = useLoaderData()
-    const { id, title, details_course_description, picture, price, created_by, course_duration, total_module } = roomBooking;
+    const enrollment = useLoaderData()
+    const { id, title, details_course_description, picture, price, created_by, course_duration, total_module } = enrollment;
     return (
 
         <div className="flex items-center justify-center relative" >
@@ -17,24 +17,25 @@ const CourseEnroll = () => {
                 <div className="absolute inset-0 bg-gray-900 bg-opacity-75"></div>
                 <div className="items-center relative mt-8">
                     <div className="relative">
-                        {/* <img className=" inset-0 h-full w-full object-cover" src={picture} alt="" /> */}
-                        {/* <img className="rounded-t-lg" src={picture} alt="course" /> */}
-
-
                         <div className="relative lg:h-[700px] md:h-[450px] h-64 bg-center bg-cover rounded-t-md" style={{ backgroundImage: `url("${picture}")` }}>
                             <div className="absolute top-0 w-full flex bg-black/50 rounded-t-md justify-between items-center">
-                                <h2 className='text-4xl p-2  text-white'>{title}</h2>
-                                <p className="btn btn-ghost hover:bg-transparent ransition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-300"><FaFilePdf className="mr-2 text-white text-2xl "></FaFilePdf><PDFDownloadLink document={<PDFFile />} filename="FORM">
-                                    {({ loading }) => (loading ? <button>Loading Document...</button> : <button className="text-yellow-200 hover:text-red-500 hover:transform-2">DOWNLOAD</button>)}
+                                <h2 className='lg:text-4xl md:text:2xl text-xl p-2 text-white'>{title}</h2>
+                                <div className="bg-gray-900 lg:py-4 md:py-6 py-6 px-4 transition ease-in-out delay-50 duration-300 flex space-x-2 items-center border-l-2 border-yellow-500 hover:border-l-4 hover:border-emerald-500"><FaFilePdf className="mr-2 text-white text-2xl "></FaFilePdf><PDFDownloadLink document={<PDFFile />} filename="FORM">
+                                    {({ loading }) => (loading ? <button>Loading Document...</button> : <button className="text-white hover:text-red-500 hover:transform-2">DOWNLOAD</button>)}
                                 </PDFDownloadLink>
-                                    {/* <PDFFile /> */}</p>
+                                    {/* <PDFFile /> */}</div>
                             </div>
-                            <div className='absolute bottom-0 shadow-md bg-slate-100/50 p-4 w-full'>
+                            <div className='absolute bottom-0 shadow-md bg-slate-100/50 md:p-4 p-2 w-full flex items-center justify-between'>
                                 <p className="capitalize font-bold"><span className="font-bold">Author:</span> {created_by}</p>
-                                <p className="btn btn-ghost capitalize"><FaClock className="mr-2 text-white "></FaClock>{course_duration}</p>
-                                <p className="btn btn-ghost capitalize"><FaBook className="mr-2 text-white "></FaBook>{total_module}</p>
-
-                                <p className='absolute right-4 top-4 bg-white/50 rounded-md px-2 text-2xl font-bold text-yellow-700'>$ {price} </p>
+                                <div className="flex items-center capitalize">
+                                    <FaClock className="mr-2 "></FaClock>
+                                    <h2 className="mr-1">Course Time:</h2> <p className="font-bold">{course_duration}</p>
+                                </div>
+                                <div className="flex items-center capitalize">
+                                    <FaClock className="mr-2 "></FaClock>
+                                    <h2 className="mr-1">Classes:</h2> <p className="font-bold">{total_module}</p>
+                                </div>
+                                <p className='right-4 top-4 bg-white/50 rounded-md px-2 text-2xl font-bold text-yellow-700'>$ {price} </p>
                             </div>
 
                         </div>
@@ -55,27 +56,6 @@ const CourseEnroll = () => {
                 </div>
             </div>
         </div >
-
-
-
-        // <div className="hero min-h-screen" style={{ backgroundImage: `url("${picture}")` }}>
-        //     <img src={picture} alt="" />
-        //     <div className="card mt-96 lg-w-1/3 w-4/5 hover:bg-white/95 bg-white/70 shadow-xl transition-colors">
-        //         {/* <img className='' src={picture} alt="room" /> */}
-        //         <div className="card-body">
-
-        //             <h2 className="card-title text-gray-700">{title} </h2>
-        //             <p className='text-2xl font-bold text-blue-600'>$ {price} </p>
-        //             <div className="flex justify-between items-center  text-blue-600">
-        //                 <div className='flex gap-2'>
-        //                     <div className='flex items-center rounded-md outline outline-1 outline-blue-600 bg-white/80 hover:bg-blue-100 p-2 hover:text-black'><FaBed></FaBed> <p className='ml-2'> {bed} </p></div>
-        //                     <div className='flex items-center rounded-md outline outline-1 outline-blue-600 bg-white/80 hover:bg-blue-100 p-2 hover:text-black'><FaUser></FaUser><p className='ml-2'> {guest}</p></div>
-        //                 </div>
-        //                 <button className="btn outline-0 bg-blue-800">Book Now</button>
-        //             </div>
-        //         </div>
-        //     </div>
-        // </div >
     );
 };
 

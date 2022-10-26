@@ -3,12 +3,11 @@ import { FaBed, FaUser } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 
-const CardSlide = ({ room }) => {
-    const { id, title, picture, price, bed, guest } = room;
+const CardSlide = ({ course }) => {
+    const { id, title, picture, price, bed, guest } = course;
     return (
         <div className="card w-64 bg-base-100 shadow-xl">
-            {/* <figure><img url={picture} alt="Room" /></figure> */}
-            <img className='' src={picture} alt="room" />
+            <img className='' src={picture} alt="course" />
             <div className="card-body text-yellow-700 p-0">
 
                 <div className="">

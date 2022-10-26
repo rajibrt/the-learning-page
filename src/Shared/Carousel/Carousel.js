@@ -6,7 +6,7 @@ import { useLoaderData } from "react-router-dom";
 import CardSlide from "./CardSlide";
 
 const Carousel = () => {
-    const allRooms = useLoaderData();
+    const allCourses = useLoaderData();
 
     const settings = {
         dots: true,
@@ -47,9 +47,9 @@ const Carousel = () => {
     return (
         <Slider className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center mt-8' {...settings}>
             {
-                allRooms.map(room => <CardSlide
-                    key={room.id}
-                    room={room}
+                allCourses.map(course => <CardSlide
+                    key={course.id}
+                    course={course}
                 ></CardSlide>)
             }
         </Slider>
