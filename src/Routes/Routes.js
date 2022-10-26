@@ -13,6 +13,9 @@ import TermsAndConditions from "../Pages/Others/TermsAndCondition/TermsAndCondit
 import Profile from "../Pages/Others/Profile/Profile";
 import Faq from "../Pages/Faq";
 import ErrorPage from "../Pages/Others/ErrorPage";
+import PDFFile from "../Shared/PDFfile";
+import Enrollment from "../Pages/Enrollment";
+import Courses from "../Pages/Courses";
 
 export const routes = createBrowserRouter([
     {
@@ -25,6 +28,10 @@ export const routes = createBrowserRouter([
                 element: <Home></Home>,
                 loader: () => fetch('http://localhost:4000/courses')
 
+            },
+            {
+                path: '/courses',
+                element: <Courses></Courses>
             },
             {
                 path: '/services',
@@ -40,7 +47,16 @@ export const routes = createBrowserRouter([
             },
             {
                 path: '/courses/:id',
-                element: <PrivateRoute><CourseEnroll></CourseEnroll></PrivateRoute>,
+                element: <CourseEnroll></CourseEnroll>,
+                loader: ({ params }) => fetch(`http://localhost:4000/courses/${params.id}`)
+            },
+            {
+                path: '/enrollment',
+                element: <PrivateRoute><Enrollment></Enrollment></PrivateRoute>
+            },
+            {
+                path: '/pdffile/:id',
+                element: <PDFFile></PDFFile>,
                 loader: ({ params }) => fetch(`http://localhost:4000/courses/${params.id}`)
             },
             {
@@ -66,7 +82,7 @@ export const routes = createBrowserRouter([
             {
                 path: '/faq',
                 element: <Faq></Faq>
-            }
+            },
         ]
     }
 ])

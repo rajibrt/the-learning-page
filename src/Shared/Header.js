@@ -1,7 +1,7 @@
 import { GoogleAuthProvider } from 'firebase/auth';
-import { Avatar, Button, Dropdown, Navbar, Tooltip } from 'flowbite-react';
+import { Tooltip } from 'flowbite-react';
 import React, { useContext } from 'react';
-import { FaGoogle, FaUserCircle } from 'react-icons/fa';
+import { FaUserCircle } from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../context/AuthProvider/AuthProvider';
 import logo from '../assets/logo.svg'
@@ -37,6 +37,7 @@ const Header = () => {
                     </label>
                     <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                         <li><Link to='/'>Home</Link></li>
+                        <li><Link to='/courses'>Courses</Link></li>
                         <li tabIndex={0}>
                             <a className="justify-between">
                                 Parent
@@ -62,6 +63,7 @@ const Header = () => {
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">
                     <li><Link to='/'>Home</Link></li>
+                    <li><Link to='/courses'>Courses</Link></li>
                     <li tabIndex={0}>
                         <a>
                             Parent
@@ -101,8 +103,8 @@ const Header = () => {
                         <>
                             <Link className='text-blue-600 mx-2' to='/login'>Login</Link>
                             <Link to='/register'>Register</Link>
-                            <button onClick={handleGoogleSignIn} className="btn btn-ghost"><FaGoogle className='mr-2'></FaGoogle>Login</button>
-                            <button className="btn btn-ghost"><FaUserCircle className='mr-2'></FaUserCircle> <Link to='/login'>Login</Link></button>
+                            {/* <button onClick={handleGoogleSignIn} className="btn btn-ghost"><FaGoogle className='mr-2'></FaGoogle>Login</button>
+                            <button className="btn btn-ghost"><FaUserCircle className='mr-2'></FaUserCircle> <Link to='/login'>Login</Link></button> */}
                         </>
                 }
                 <div className="form-control">

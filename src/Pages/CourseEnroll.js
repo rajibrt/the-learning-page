@@ -1,7 +1,6 @@
 import { PDFDownloadLink } from '@react-pdf/renderer';
-import { Avatar } from 'flowbite-react';
 import React from 'react';
-import { FaArrowLeft, FaBook, FaClock, FaFilePdf, FaUser } from 'react-icons/fa';
+import { FaArrowLeft, FaClock, FaFilePdf } from 'react-icons/fa';
 import { Link, useLoaderData } from 'react-router-dom';
 import PDFFile from '../Shared/PDFfile';
 
@@ -12,20 +11,25 @@ const CourseEnroll = () => {
     return (
 
         <div className="flex items-center justify-center relative" >
+            <div className="absolute top-0 bg-red-500 z-99">
+                <h2>{title}</h2>
+            </div>
             <div className="md:w-8/12 w-full rounded-lg shadow-2xl overflow-hidden lg:mx-0 md:my-8 mx-8 md:mx-0">
+
                 <img className="absolute inset-0 h-full w-full object-cover blur-sm " src={picture} alt="" />
                 <div className="absolute inset-0 bg-gray-900 bg-opacity-75"></div>
                 <div className="items-center relative mt-8">
                     <div className="relative">
                         <div className="relative lg:h-[700px] md:h-[450px] h-64 bg-center bg-cover rounded-t-md" style={{ backgroundImage: `url("${picture}")` }}>
-                            <div className="absolute top-0 w-full flex bg-black/50 rounded-t-md justify-between items-center">
-                                <h2 className='lg:text-4xl md:text:2xl text-xl p-2 text-white'>{title}</h2>
-                                <div className="bg-gray-900 lg:py-4 md:py-6 py-6 px-4 transition ease-in-out delay-50 duration-300 flex space-x-2 items-center border-l-2 border-yellow-500 hover:border-l-4 hover:border-emerald-500"><FaFilePdf className="mr-2 text-white text-2xl "></FaFilePdf><PDFDownloadLink document={<PDFFile />} filename="FORM">
+                            <div className="absolute top-0 w-full flex bg-black/50 rounded-t-md justify-between items-center h-20">
+                                <h2 className='lg:text-3xl md:text-2xl text-xl md:py-6 px-2 text-white'>{title}</h2>
+                                <div className="bg-gray-900 h-full lg:py-4 md:py-6 py-6 px-4 transition ease-in-out delay-50 duration-300 flex space-x-2 items-center border-l-2 border-yellow-500 hover:border-l-4 hover:border-emerald-500"><FaFilePdf className="mr-2 text-white text-2xl "></FaFilePdf><PDFDownloadLink document={<PDFFile />} filename="FORM">
                                     {({ loading }) => (loading ? <button>Loading Document...</button> : <button className="text-white hover:text-red-500 hover:transform-2">DOWNLOAD</button>)}
                                 </PDFDownloadLink>
                                     {/* <PDFFile /> */}</div>
+
                             </div>
-                            <div className='absolute bottom-0 shadow-md bg-slate-100/50 md:p-4 p-2 w-full flex items-center justify-between'>
+                            <div className='absolute bottom-0 shadow-md bg-slate-100/50 md:p-4 p-2 w-full flex flex-wrap items-center justify-between '>
                                 <p className="capitalize font-bold"><span className="font-bold">Author:</span> {created_by}</p>
                                 <div className="flex items-center capitalize">
                                     <FaClock className="mr-2 "></FaClock>

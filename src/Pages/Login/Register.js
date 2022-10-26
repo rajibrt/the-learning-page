@@ -56,13 +56,13 @@ const Register = () => {
                 <div className="mb-2 block ">
                     <Label
                         htmlFor="name"
-                        value="Name"
+                        value="Full Name"
                     />
                 </div>
                 <TextInput
                     name="name"
                     type="text"
-                    placeholder="Name"
+                    placeholder="Full Name"
                     required={true}
                 />
             </div>
@@ -120,6 +120,9 @@ const Register = () => {
             <Button type="submit" disabled={!accepted}>
                 Register
             </Button>
+            <div className='text-center'>
+                <h2>Already have an account? Please, try to <Link className="link link-primary" to="/login">Login</Link></h2>
+            </div>
         </form>
     );
 };
