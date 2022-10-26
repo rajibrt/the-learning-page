@@ -1,7 +1,9 @@
+import { PDFDownloadLink } from '@react-pdf/renderer';
 import { Avatar } from 'flowbite-react';
 import React from 'react';
-import { FaArrowLeft, FaBook, FaClock, FaUser } from 'react-icons/fa';
+import { FaArrowLeft, FaBook, FaClock, FaFilePdf, FaUser } from 'react-icons/fa';
 import { Link, useLoaderData } from 'react-router-dom';
+import PDFFile from '../Shared/PDFfile';
 
 
 const CourseEnroll = () => {
@@ -18,8 +20,15 @@ const CourseEnroll = () => {
                         {/* <img className=" inset-0 h-full w-full object-cover" src={picture} alt="" /> */}
                         {/* <img className="rounded-t-lg" src={picture} alt="course" /> */}
 
+
                         <div className="relative lg:h-[700px] md:h-[450px] h-64 bg-center bg-cover rounded-t-md" style={{ backgroundImage: `url("${picture}")` }}>
-                            <h2 className='text-4xl w-full p-2 absolute top-0 bg-black/50 text-white'>{title}</h2>
+                            <div className="absolute top-0 w-full flex bg-black/50 rounded-t-md justify-between items-center">
+                                <h2 className='text-4xl p-2  text-white'>{title}</h2>
+                                <p className="btn btn-ghost hover:bg-transparent ransition ease-in-out delay-50 hover:-translate-y-1 hover:scale-110 duration-300"><FaFilePdf className="mr-2 text-white text-2xl "></FaFilePdf><PDFDownloadLink document={<PDFFile />} filename="FORM">
+                                    {({ loading }) => (loading ? <button>Loading Document...</button> : <button className="text-yellow-200 hover:text-red-500 hover:transform-2">DOWNLOAD</button>)}
+                                </PDFDownloadLink>
+                                    {/* <PDFFile /> */}</p>
+                            </div>
                             <div className='absolute bottom-0 shadow-md bg-slate-100/50 p-4 w-full'>
                                 <p className="capitalize font-bold"><span className="font-bold">Author:</span> {created_by}</p>
                                 <p className="btn btn-ghost capitalize"><FaClock className="mr-2 text-white "></FaClock>{course_duration}</p>
