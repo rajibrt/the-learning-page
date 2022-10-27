@@ -15,7 +15,7 @@ import Faq from "../Pages/Faq";
 import ErrorPage from "../Pages/Others/ErrorPage";
 import PDFFile from "../Shared/PDFfile";
 import Courses from "../Pages/Courses";
-import PremiumAccess from "../Pages/PremiumAccess";
+import PremiumAccess from "../Shared/PremiumAccess";
 export const routes = createBrowserRouter([
     {
         path: '/',
@@ -25,13 +25,13 @@ export const routes = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                loader: () => fetch('http://localhost:4000/courses')
+                loader: () => fetch('https://the-learning-page-server.vercel.app/courses')
 
             },
             {
                 path: '/courses',
                 element: <Courses></Courses>,
-                loader: () => fetch('http://localhost:4000/courses')
+                loader: () => fetch('https://the-learning-page-server.vercel.app/courses')
             },
             {
                 path: '/services',
@@ -48,16 +48,17 @@ export const routes = createBrowserRouter([
             {
                 path: '/courses/:id',
                 element: <CourseEnroll></CourseEnroll>,
-                loader: ({ params }) => fetch(`http://localhost:4000/courses/${params.id}`)
+                loader: ({ params }) => fetch(`https://the-learning-page-server.vercel.app/courses/${params.id}`)
             },
             {
-                path: '/premiumaccess',
-                element: <PrivateRoute><PremiumAccess></PremiumAccess></PrivateRoute>
+                path: '/premiumaccess/:id',
+                element: <PrivateRoute><PremiumAccess></PremiumAccess></PrivateRoute>,
+                loader: ({ params }) => fetch(`https://the-learning-page-server.vercel.app/courses/${params.id}`)
             },
             {
                 path: '/pdffile/:id',
                 element: <PDFFile></PDFFile>,
-                loader: ({ params }) => fetch(`http://localhost:4000/courses/${params.id}`)
+                loader: ({ params }) => fetch(`https://the-learning-page-server.vercel.app/courses/${params.id}`)
             },
             {
                 path: '/login',

@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaBed, FaBook, FaClock, FaUser } from 'react-icons/fa';
+import { FaBook, FaClock } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 
