@@ -1,7 +1,7 @@
 > ### `The Learning Page`
-> * Client-Side code github repository (https://github.com/programming-hero-web-course1/b610-learning-platform-client-side-rajibrt)
-> * Server-Side code github repository (https://github.com/programming-hero-web-course1/b610-lerning-platform-server-side-rajibrt)
-> * Live Link: (https://the-learning-page.web.app/)https://the-learning-page.web.app/
+> * Client-Side code github repository https://github.com/programming-hero-web-course1/b610-learning-platform-client-side-rajibrt
+> * Server-Side code github repository https://github.com/programming-hero-web-course1/b610-lerning-platform-server-side-rajibrt
+> * Live Link: https://the-learning-page.web.app/
 ###  What in this website:
 * Online educational website
 * Latest codding related course
