@@ -1,6 +1,4 @@
-import Carousel from '../Shared/Carousel/Carousel.js';
 import React from 'react';
-import HeroBg from '../../src/assets/hero-images/cover-hero-banner.webp'
 
 const Hero = () => {
     return (
