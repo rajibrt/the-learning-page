@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "king-palace"
-  }
+    "default": "the-learning-page",
+    "staging": "the-learning-page"
+  },
+  "targets": {},
+  "etags": {}
 }

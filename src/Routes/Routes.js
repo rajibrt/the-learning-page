@@ -1,15 +1,12 @@
 import { createBrowserRouter } from "react-router-dom";
 import About from "../Pages/About";
-import Contact from "../Pages/Contact";
 import Home from "../Pages/Home";
 import Services from "../Pages/Services";
 import Main from "../layout/Main";
 import CourseEnroll from "../Pages/CourseEnroll";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Login/Register";
-import OffCanvas from "../Shared/OffCanvas";
 import PrivateRoute from "./PrivateRoute";
-import TermsAndConditions from "../Pages/Others/TermsAndCondition/TermsAndConditions";
 import Profile from "../Pages/Others/Profile/Profile";
 import Faq from "../Pages/Faq";
 import ErrorPage from "../Pages/Others/ErrorPage";
@@ -41,10 +38,6 @@ export const routes = createBrowserRouter([
             {
                 path: '/about',
                 element: <About></About>
-            },
-            {
-                path: '/contact',
-                element: <Contact></Contact>
             },
             {
                 path: '/courses/:id',
