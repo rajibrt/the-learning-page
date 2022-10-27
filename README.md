@@ -1,4 +1,4 @@
-> ### `The Learning Page`
+> ### Website: `The Learning Page`
 > * Client-Side code github repository https://github.com/programming-hero-web-course1/b610-learning-platform-client-side-rajibrt
 > * Server-Side code github repository https://github.com/programming-hero-web-course1/b610-lerning-platform-server-side-rajibrt
 > * Live Link: https://the-learning-page.web.app/
@@ -11,7 +11,7 @@
 * Full responsive design
 * Fast loading
 * Clean UI
-### Framework of I used for this website
+### Framework I used for this website
 * React JS
 * Node JS
 * Tailwind
