@@ -1,7 +1,20 @@
-> ### `Website Name`
-> The Learning Page
-###  Live Link:
-
+> ### `The Learning Page`
+> * Client-Side code github repository (https://github.com/programming-hero-web-course1/b610-learning-platform-client-side-rajibrt)
+> * Server-Side code github repository (https://github.com/programming-hero-web-course1/b610-lerning-platform-server-side-rajibrt)
+> * Live Link: (https://the-learning-page.web.app/)https://the-learning-page.web.app/
+###  What in this website:
+* Online educational website
+* Latest codding related course
+* Worldwide access
+* Lifetime access
+* Free course will be available soon
+* Full responsive design
+* Fast loading
+* Clean UI
+### Framework of I used for this website
+* React JS
+* Node JS
+* Tailwind
 
 # Getting Started with Create React App
 

@@ -10,7 +10,7 @@ const CourseCard = ({ course }) => {
 
     return (
         <div>
-            <div className="card w-96 bg-base-100 shadow-xl">
+            <div className="card h-[550px] min-h-[550px] w-96 bg-base-100 shadow-xl">
                 <div className="relative" >
                     <img src={picture} alt="course" />
                     <h2 className="absolute text-white font-bold w-full p-2 bottom-0 bg-black/50">Rating: {rating.number}</h2>
