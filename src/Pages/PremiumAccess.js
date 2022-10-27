@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Enrollment = () => {
+const PremiumAccess = () => {
     return (
         <div>
             <h2>Payment Page</h2>
@@ -8,4 +8,4 @@ const Enrollment = () => {
     );
 };
 
-export default Enrollment;
+export default PremiumAccess;

@@ -14,9 +14,8 @@ import Profile from "../Pages/Others/Profile/Profile";
 import Faq from "../Pages/Faq";
 import ErrorPage from "../Pages/Others/ErrorPage";
 import PDFFile from "../Shared/PDFfile";
-import Enrollment from "../Pages/Enrollment";
 import Courses from "../Pages/Courses";
-import LeftSidebar from "../Shared/LeftSidebar";
+import PremiumAccess from "../Pages/PremiumAccess";
 export const routes = createBrowserRouter([
     {
         path: '/',
@@ -52,8 +51,8 @@ export const routes = createBrowserRouter([
                 loader: ({ params }) => fetch(`http://localhost:4000/courses/${params.id}`)
             },
             {
-                path: '/enrollment',
-                element: <PrivateRoute><Enrollment></Enrollment></PrivateRoute>
+                path: '/premiumaccess',
+                element: <PrivateRoute><PremiumAccess></PremiumAccess></PrivateRoute>
             },
             {
                 path: '/pdffile/:id',

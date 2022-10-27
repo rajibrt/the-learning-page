@@ -86,13 +86,9 @@ const Profile = () => {
                     required={true}
                 />
             </div>
-            <div className="flex items-center gap-2">
-                <Label htmlFor="terms">
-                    Accept <Link to='/terms'><span className='text-blue-600'>Terms & Condition</span></Link>
-                </Label>
-            </div>
+
             <Button type="submit">
-                Register
+                Update
             </Button>
         </form>
     );

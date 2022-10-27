@@ -72,7 +72,7 @@ const CourseEnroll = () => {
 
                                         <div className='flex justify-between gap-2'>
                                             <Link to='/'><button className="btn outline-0 bg-blue-800 text-white" ><FaArrowLeft></FaArrowLeft> </button></Link>
-                                            <button className="btn outline-0 bg-blue-800 text-white">Get premium access</button>
+                                            <Link to="/premiumAccess" className="btn outline-0 bg-blue-800 text-white">Get premium access</Link>
                                         </div>
                                     </div>
                                 </div>
