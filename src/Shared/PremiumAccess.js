@@ -14,7 +14,7 @@ const PremiumAccess = () => {
                     <h2 className="card-title">{title}</h2>
                     <p>You have to pay: ${price}</p>
                     <div className="card-actions justify-end">
-                        <button className="btn outline-0 bg-blue-800">Enroll Now</button>
+                        <button className="btn outline-0 bg-blue-800">Checkout</button>
                     </div>
                 </div>
             </div>

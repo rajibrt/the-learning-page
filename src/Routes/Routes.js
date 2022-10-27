@@ -16,6 +16,7 @@ import ErrorPage from "../Pages/Others/ErrorPage";
 import PDFFile from "../Shared/PDFfile";
 import Courses from "../Pages/Courses";
 import PremiumAccess from "../Shared/PremiumAccess";
+import Blog from "../Pages/Blog";
 export const routes = createBrowserRouter([
     {
         path: '/',
@@ -69,14 +70,6 @@ export const routes = createBrowserRouter([
                 element: <Register></Register>
             },
             {
-                path: '/offcanvas',
-                element: <OffCanvas></OffCanvas>
-            },
-            {
-                path: '/terms',
-                element: <TermsAndConditions></TermsAndConditions>
-            },
-            {
                 path: '/profile',
                 element: <PrivateRoute><Profile></Profile></PrivateRoute>
             },
@@ -84,6 +77,10 @@ export const routes = createBrowserRouter([
                 path: '/faq',
                 element: <Faq></Faq>
             },
+            {
+                path: '/blog',
+                element: <Blog></Blog>
+            }
         ]
     }
 ])
