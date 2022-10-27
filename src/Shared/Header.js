@@ -39,6 +39,7 @@ const Header = () => {
                         <li><Link to='/'>Home</Link></li>
                         <li><Link to='/courses'>Courses</Link></li>
                         <li><Link to='/blog'>Blog</Link></li>
+                        <li><Link to='/faq'>FAQ</Link></li>
                     </ul>
                 </div>
                 {/* <Link to='/' className="site-name btn btn-ghost normal-case text-xl text-yellow-700" >The Learning Page</Link> */}
@@ -55,6 +56,7 @@ const Header = () => {
                     <li><Link to='/'>Home</Link></li>
                     <li><Link to='/courses'>Courses</Link></li>
                     <li><Link to='/blog'>Blog</Link></li>
+                    <li><Link to='/faq'>FAQ</Link></li>
                 </ul>
             </div>
 
