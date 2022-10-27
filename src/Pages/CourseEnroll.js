@@ -16,12 +16,12 @@ const CourseEnroll = () => {
     // };
 
     return (
-        <div>
+        <div className='w-full'>
             {/* <Pdf targetRef={ref} filename="code-example.pdf">
                 {({ toPdf }) => <button onClick={toPdf}>Generate Pdf</button>}
             </Pdf> */}
 
-            <div style={{ width: 500, height: 500, background: 'blue' }} ref={ref}>
+            <div ref={ref}>
                 <div className="flex items-center justify-center relative" >
                     <div className="md:w-8/12 w-full rounded-lg shadow-2xl overflow-hidden lg:mx-0 md:my-8 mx-8 md:mx-0">
 
